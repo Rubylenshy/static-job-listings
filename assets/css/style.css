@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+:root{
+    
+    --desaturated-dark-cyan: hsl(180, 29%, 50%);
+    --white: rgb(255, 253, 254);
+    --light-cyan-bg: hsl(180, 52%, 96%);
+    --light-cyan-filter: hsl(180, 31%, 95%);
+    --dark-grayish-cyan: hsl(180, 8%, 52%);
+    --vd-grayish-cyan: hsl(180, 14%, 20%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+body{
+    background: var(--light-cyan-filter);
+}
+a{
+    text-decoration: none;
+    color: var(--dark-grayish-cyan);
+    font-weight: 700;
+}
+a:hover{
+    text-decoration: underline;
+}
+header button{
+    padding-left: 10px;
+    background: var(--light-cyan-bg);
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--desaturated-dark-cyan);
+}
+header button img{
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 0 5px 5px 0;
+    background: var(--desaturated-dark-cyan);
+}
+
+
+
+header{
+    background: url(../images/bg-header-mobile.svg) center no-repeat var(--desaturated-dark-cyan);
+    background-size: cover;
+    height: 180px;
+    margin-bottom: 100px;
+}
+header.nofilter{
+    margin-bottom: 50px;
+}
+
+.filter{
+    background: var(--white);
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 150px;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0px 15px 10px 1px hsl(180, 29%, 50%, .2);
+}
+.filter-btn{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+/* header.nofilter .filter{
+    display: none;
+} */
+
+
+.job-list{
+    background: var(--white);  
+    width: 90%;
+    margin: 20px auto 40px;
+    border-radius: 5px;
+    padding: 15px 20px;
+    box-shadow: 0px 15px 10px 1px hsl(180, 29%, 50%, .1);
+}
+.job-list img{
+    width: 50px;
+    margin-top: -50px;
+}
+.name-tag{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+.name-tag h1{
+    font-size: 17px;
+    color: var(--desaturated-dark-cyan);
+    margin-right: 10px;
+}
+.name-tag span{
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 14px;
+}
+.new, .featured{
+    display: none;
+}
+.new.true,
+.featured.true{
+    display: block;
+}
+.container.bordered .job-list.true{
+    border-left: 5px solid var(--desaturated-dark-cyan);
+}
+.new{
+    background: var(--desaturated-dark-cyan);
+}
+.featured{
+    background: var(--vd-grayish-cyan);
+}
+.job-list h2{
+    font-size: 17px;
+    color: var(--vd-grayish-cyan);
+    margin-bottom: 15px;
+}
+.duration_location{
+    display: flex;
+}
+.duration_location span{
+    color: var(--dark-grayish-cyan);
+    display: flex;
+    align-items: center;
+}
+.duration_location span:nth-child(2)::before,
+.duration_location span:nth-child(2)::after{
+    content: '';
+    display: inline-flex;
+    flex-direction: row;
+    margin: 0 10px;
+    height: 5px;
+    width: 5px;
+    border: none;
+    border-radius: 50%;
+    background: var(--dark-grayish-cyan);
+}
+
+.job-list hr{
+    margin: 15px 0;
+}
+.job-list button{
+    padding: 10px;
+    margin: 5px;
+    background: var(--light-cyan-bg);
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--desaturated-dark-cyan);
+    transition: all .2s;
+}
+.job-list button:hover,
+.job-list button:focus{
+    background: var(--desaturated-dark-cyan);
+    color: var(--white);
+}
+
+
+@media (min-width: 700px) {
+    header{
+        background: url(../images/bg-header-desktop.svg) center no-repeat var(--desaturated-dark-cyan);
+        background-size: cover;
+    }
+}
