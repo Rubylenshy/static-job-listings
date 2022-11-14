@@ -76,9 +76,9 @@ header.nofilter{
     flex-wrap: wrap;
     gap: 10px;
 }
-/* header.nofilter .filter{
+header.nofilter .filter{
     display: none;
-} */
+}
 
 
 .job-list{

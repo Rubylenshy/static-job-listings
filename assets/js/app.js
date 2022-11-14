@@ -17,20 +17,24 @@ async function jobListings(file){
     const jobList = JSON.parse(jsonjobList);
     let newjobList = '';
     
-    jobList.forEach(item =>{    
-        let language_s = '';
+    jobList.forEach(item =>{ 
+        let languageBtn = '';
+        let lang_s = '';
         item.languages.forEach(lang =>{
-            language_s += `<button type="button">${lang}</button>`
+            languageBtn += `<button type="button">${lang}</button>`
+            lang_s += `${lang} `
         });
 
+        let toolsBtn = '';
         let tool_s = '';
         item.tools.forEach(tool =>{
-            tool_s += `<button type="button">${tool}</button>`
+            toolsBtn += `<button type="button">${tool}</button>`
+            tool_s += `${tool} `
         });
 
         let htmljobList = `<div class="job-list ${item.featured}" data-role="${item.role}" data-level="${item.level}" 
-                            data-languages="${item.languages}" data-tools="${item.tools}">
-                                <img src="${item.logo}" alt="">
+                            data-languages="${lang_s}" data-tools="${tool_s}">
+                                <img src="${item.logo}" alt="" width="50" height="50" >
                                 <div class="name-tag">
                                     <h1>${item.company}</h1>
                                     <span class="new ${item.new}">NEW!</span>
@@ -44,18 +48,25 @@ async function jobListings(file){
                                 <div class="div-btns">
                                 <button type="button">${item.role}</button>
                                 <button type="button">${item.level}</button>
-                                ${language_s}
-                                ${tool_s}
+                                ${languageBtn}
+                                ${toolsBtn}
                                 </div>
                             </div>`;
-                                
+
+        let jobItem = html.querySelector('.job-list');
+
                                 if (item.featured == true) {
                                     document.querySelector('.container').classList.add('bordered');
                                 }
+                                
         newjobList += htmljobList;
-
+                                // document.querySelector('.div-btns').addEventListener('click', ()=>{
+                                //     document.querySelector('header').classList.remove('nofilter')
+                                // })
         
     })
-                            
+    
+
     container.innerHTML = newjobList;
 }
+
