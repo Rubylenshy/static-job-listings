@@ -35,7 +35,7 @@ header button{
     border: none;
     border-radius: 5px;
     font-weight: 700;
-    font-size: 12px;
+    font-size: .85em;
     color: var(--desaturated-dark-cyan);
 }
 header button img{
@@ -76,6 +76,9 @@ header.nofilter{
     flex-wrap: wrap;
     gap: 10px;
 }
+.filter-btn button{
+    cursor: pointer;
+}
 header.nofilter .filter{
     display: none;
 }
@@ -100,7 +103,7 @@ header.nofilter .filter{
     margin: 10px 0;
 }
 .name-tag h1{
-    font-size: 17px;
+    font-size: 1.1em;
     color: var(--desaturated-dark-cyan);
     margin-right: 10px;
 }
@@ -109,7 +112,7 @@ header.nofilter .filter{
     border-radius: 20px;
     color: var(--white);
     font-weight: 700;
-    font-size: 14px;
+    font-size: .90em;
 }
 .new, .featured{
     display: none;
@@ -128,7 +131,7 @@ header.nofilter .filter{
     background: var(--vd-grayish-cyan);
 }
 .job-list h2{
-    font-size: 17px;
+    font-size: 1.1em;
     color: var(--vd-grayish-cyan);
     margin-bottom: 15px;
 }
@@ -163,7 +166,7 @@ header.nofilter .filter{
     border: none;
     border-radius: 5px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.9em;
     cursor: pointer;
     color: var(--desaturated-dark-cyan);
     transition: all .2s;
