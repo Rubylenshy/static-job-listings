@@ -81,8 +81,8 @@ async function jobListings(file){
             })
         }
         clearFilter.addEventListener('click', ()=>{
-               nofilter();
-               allJobs();
+            nofilter();
+            allJobs();
         });
 
         let jobItem = document.querySelectorAll('.job-list');
