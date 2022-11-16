@@ -157,6 +157,8 @@ header.nofilter .filter{
 }
 
 .job-list hr{
+    background: var(--dark-grayish-cyan);
+    border: 1px solid var(--dark-grayish-cyan);
     margin: 15px 0;
 }
 .job-list button{
